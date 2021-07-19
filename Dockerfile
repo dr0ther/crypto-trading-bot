@@ -23,5 +23,8 @@ COPY . /usr/src/app
 # Apply all patches in app
 RUN npm run postinstall
 
+# Create base files from examples
+RUN cp instance.js.dist instance.js && cp conf.json.dist conf.json && sqlite3 bot.db < bot.sql
+
 EXPOSE 8080
 CMD ["npm", "run", "start"]
