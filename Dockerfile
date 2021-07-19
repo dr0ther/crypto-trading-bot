@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/src/app
+RUN git clone https://github.com/dr0ther/crypto-trading-bot.git
+
 
 # Install app dependencies
 COPY package.json /usr/src/app/
