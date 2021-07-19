@@ -1,6 +1,6 @@
 FROM node:10
 
-MAINTAINER Daniel Espendiller <daniel@espendiller.net>
+MAINTAINER John Wade <john.thomas.wade@gmail.com>
 
 # Install build-essential, sqlite in order
 RUN apt-get update && apt-get install -y \
@@ -8,12 +8,12 @@ RUN apt-get update && apt-get install -y \
     git \
 && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /usr/src/app
-RUN git clone https://github.com/dr0ther/crypto-trading-bot.git
 
+RUN git clone https://github.com/dr0ther/crypto-trading-bot.git /usr/src/app
+
+WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package.json /usr/src/app/
 RUN npm install --production && \
     npm cache clean --force
 
