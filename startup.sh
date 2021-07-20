@@ -6,14 +6,16 @@ dest=/usr/src/app
 
 #rsync -arv $source/* $dest/ 
 
-#FILE=/usr/src/app/instance.js
-#if [ -f "$FILE" ]; then
-#    echo "$FILE exist"
-#else 
-#    echo "$FILE does not exist"
-#    cp instance.js.dist instance.js
-#fi
-echo "hello"
+FILE=/config/conf.json
+if [ -f "$FILE" ]; then
+    echo "$FILE exist"
+    rm -rf /usr/src/app/conf.json
+    cp /config/conf.json /usr/src/app/conf.json
+else 
+    echo "$FILE does not exist"
+    cp /usr/src/app/conf.json /config/conf.json
+fi
+
 
 #keep it running
 tail -f /dev/null
