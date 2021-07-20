@@ -100,9 +100,9 @@ npm start
 For initialize the configuration once
 
 ```
-➜ cp instance.js.dist instance.js && cp conf.json.dist conf.json && sqlite3 bot.db < bot.sql
-➜ docker-compose build
-➜ docker-compose up -d
+cp instance.js.dist instance.js && cp conf.json.dist conf.json && sqlite3 bot.db < bot.sql
+docker-compose build
+docker-compose up -d
 ```
 After this you can use `docker-compose` which will give you a running bot via <http://127.0.0.1:8080>
 
