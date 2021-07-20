@@ -18,4 +18,4 @@ fi
 
 
 #keep it running
-tail -f /dev/null
+npm start
