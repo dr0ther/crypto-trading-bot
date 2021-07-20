@@ -11,7 +11,7 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists, do nothing"
 else 
     echo "$FILE does not exist"
-    git clone https://github.com/dr0ther/crypto-trading-bot.git /usr/src/app
+    cp -pr /temp/* /usr/src/app
 fi
 
 
