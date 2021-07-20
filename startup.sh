@@ -14,3 +14,6 @@ dest=/usr/src/app
 #    cp instance.js.dist instance.js
 #fi
 echo "hello"
+
+#keep it running
+tail -f /dev/null
