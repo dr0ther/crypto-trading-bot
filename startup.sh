@@ -2,13 +2,15 @@
 source=/app
 dest=/usr/src/app
 
-echo "list /app directory"
-ls -l $dir1
 
-echo "list /usr/src/app directory"
-ls -l $dir2
 
-rsync -arv $source/* $dest/ 
+#rsync -arv $source/* $dest/ 
 
-echo "list /usr/src/app directory"
-ls -l $dir2
+#FILE=/usr/src/app/instance.js
+#if [ -f "$FILE" ]; then
+#    echo "$FILE exist"
+#else 
+#    echo "$FILE does not exist"
+#    cp instance.js.dist instance.js
+#fi
+echo "hello"
